@@ -3,3 +3,58 @@
   margin: 0px;
   box-sizing: border-box;
 }
+
+
+.full-height-and-center{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+/* CSS */
+.button-24 {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: white; /* Default for light backgrounds */
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  transition: background 0.3s, color 0.3s;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  color: var(--adaptive-color);
+}
+
+.button-24:active {
+  opacity: .5;
+}
+
+/* Auto-detect background brightness */
+.button-24 {
+  --background-lightness: 255; /* Change to match the dynamic background */
+  --adaptive-color: calc((var(--background-lightness) > 128) ? black : white); 
+}
